@@ -167,57 +167,75 @@ td button:nth-child(3):hover {
   background-color: #dc2626;
 }
 @media screen and (max-width: 600px) {
+  body {
+    height: auto;
+    padding: 1rem 0;
+  }
+
   .container {
-    padding: 1rem;
     width: 95%;
+    padding: 1rem;
+    box-shadow: none;
   }
 
   #first {
     flex-direction: column;
+    gap: 8px;
   }
 
   .input {
     width: 100%;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   #forimage {
     width: 100%;
-    padding: 0.6rem;
-  }
-
-  #forimage img {
-    width: 28px;
-    height: 28px;
+    justify-content: center;
   }
 
   #second {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    align-items: stretch;
   }
 
   .controls {
     flex-direction: column;
-    align-items: stretch;
     gap: 8px;
+    width: 100%;
   }
 
   .controls button,
   .controls select {
     width: 100%;
-    font-size: 1rem;
   }
 
   table {
-    font-size: 0.85rem;
-  }
-
-  th, td {
-    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 
   td button {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.75rem;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  td {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-top: none;
+    padding: 0.5rem;
+  }
+
+  tr {
+    border-bottom: 1px solid #334155;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #1e293b;
+    border-radius: 8px;
+  }
+
+  th {
+    display: none; 
   }
 }
