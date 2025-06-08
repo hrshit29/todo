@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoapp</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cntainer">
+        <div><h1>Todo List</h1></div>
+        <div id ="first">
+            <div><input class="input" id="add"   placeholder="add a todo.." ></div>
+          <input type="text" class="input" id="time" placeholder="dd-mm-yyyy" maxlength="10" pattern="\d{2}-\d{2}-\d{4}" oninput="formatDateInput(this)"/>
+
+            <div><button id="forimage" onclick="addtodo()"><img src="3521088-200.png"></img></button></div>
+        </div>
+        <div id="second">
+            <div class="controls"><button onclick="filter()">filter</button>
+                <select class ="controls" id="filterSelect" onchange="filter()">
+                   <option value="all">All</option>
+                   <option value="pending">Pending</option>
+                   <option value="complete">Completed</option>
+                </select>
+
+            </div>
+            <div class="controls"><button onclick="del()">delete all</button></div>
+        </div>
+        <div id="third">
+            <table>
+                <thead>
+                 <tr>
+                   <th>TASK</th>   
+                   <th>DUE DATE</th>   
+                   <th>STATUS</th>   
+                   <th>ACTIONS</th>   
+                 </tr>
+                </thead>
+                <tbody id="to">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
