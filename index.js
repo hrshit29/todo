@@ -69,6 +69,8 @@ function addtodo(){
         dueDate: dueDate,
         status: "Pending"
     })}
+    document.querySelector("#add").value=""
+    document.querySelector("#time").value=""
     render();
 }
 function del(){
