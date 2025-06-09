@@ -11,7 +11,7 @@ function formatDateInput(input) {
   input.value = parts.join("-");
 }
 function filter() {
-    const selected = document.querySelector("#filterSelect").value;
+    const selected = document.querySelector("#filterSelect").value.toLowerCase();
 
     let filteredTodos = [];
 
@@ -19,11 +19,12 @@ function filter() {
         render(); 
         return;
     } else if (selected === "pending") {
-        filteredTodos = todo.filter(t => t.status === "Pending");
+        filteredTodos = todo.filter(t => t.status.toLowerCase() === "pending");
     } else if (selected === "completed") {
-        filteredTodos = todo.filter(t => t.status === "completed");
+        filteredTodos = todo.filter(t => t.status.toLowerCase() === "completed");
     }
-    const originalTodos = [...todo];
+
+    const originalTodos = [...todo];  
     todo = filteredTodos;
     render();
     todo = originalTodos;
