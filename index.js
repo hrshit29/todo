@@ -20,8 +20,8 @@ function filter() {
         return;
     } else if (selected === "pending") {
         filteredTodos = todo.filter(t => t.status === "Pending");
-    } else if (selected === "complete") {
-        filteredTodos = todo.filter(t => t.status === "Complete");
+    } else if (selected === "completed") {
+        filteredTodos = todo.filter(t => t.status === "completed");
     }
     const originalTodos = todo;
     todo = filteredTodos;
