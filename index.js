@@ -23,7 +23,7 @@ function filter() {
     } else if (selected === "completed") {
         filteredTodos = todo.filter(t => t.status === "completed");
     }
-    const originalTodos = todo;
+    const originalTodos = [...todo];
     todo = filteredTodos;
     render();
     todo = originalTodos;
